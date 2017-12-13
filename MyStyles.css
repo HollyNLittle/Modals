@@ -1,0 +1,64 @@
+﻿body {
+    font-family: Kartika,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.button {
+    background: coral;
+    padding: 1em 2em;
+    color: white;
+    border: 1px;
+    border-color: grey;
+}
+
+    .button:hover {
+        background: darkgrey;
+    }
+
+.modal {
+    display: none;
+    position: fixed;
+    /*the order of the elements*/
+    z-index: 1;
+    /*starts at the top left*/
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgbA(0,0,0,.3);
+}
+
+.modal-content {
+    background-color: gainsboro;
+    /*however far down the page you want the modal*/
+    margin: 15% auto;
+    padding: 20px;
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,.2),0 7px 20px 0 rgba(0,0,0,.2);
+    animation-name: modalopen;
+    animation-duration: 2s;
+}
+/*Style the X in the modal*/
+.closeBtn {
+    color: slategrey;
+    float: right;
+    font-size: 30px;
+}
+
+    .closeBtn:hover, .closeBtn:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+/*make the modal fade in will go from 0 to 1 in 2seconds*/
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
